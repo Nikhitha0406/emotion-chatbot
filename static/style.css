@@ -1,0 +1,350 @@
+/* ----------- General Layout ----------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f3f6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ----------- Titles ----------- */
+h1, h2 {
+  color: #222;
+  text-align: center;
+}
+h1 {
+  font-size: 2.4rem;
+  margin-top: 30px;
+}
+h2 {
+  margin: 20px 0 10px;
+}
+
+/* ----------- Landing Page (home.html) ----------- */
+.landing-container {
+  text-align: center;
+  max-width: 720px;
+  padding: 50px 20px;
+}
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin: 30px 0;
+}
+.tagline {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.btn-group button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #2c3e50;
+}
+.btn-group button:hover {
+  background-color: #1b2c3a;
+}
+footer {
+  margin-top: 40px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ----------- Logout Button ----------- */
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ----------- Chat Container ----------- */
+.chat-container {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 60px;
+}
+
+/* ----------- History Toggle Button ----------- */
+#toggleHistory {
+  margin: 10px 0;
+  background-color: #3498db;
+}
+#toggleHistory:hover {
+  background-color: #2980b9;
+}
+
+/* ----------- History Box ----------- */
+#historyBox {
+  display: none;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* ---------- Login Page ---------- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f1f3f6;
+}
+
+.login-box {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  padding: 0;
+}
+
+.login-left {
+  flex: 1;
+  background-color: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.login-left .chatbot-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.login-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-right form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-right form button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-right form button:hover {
+  background-color: #3e9445;
+}
+
+.login-right p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.flash {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+}
+.flash.danger {
+  background-color: #ffdddd;
+  color: #a94442;
+}
+.flash.success {
+  background-color: #ddffdd;
+  color: #3c763d;
+}
+
+/* ----------- Chat Box ----------- */
+#chat-box {
+  width: 100%;
+  height: 420px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+}
+
+/* ----------- Input Area ----------- */
+#input-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#user-input {
+  flex-grow: 1;
+  min-width: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  width: 70%;
+}
+button {
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background-color: #3e9445;
+}
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-log {
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.chat-entry {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.chat-entry.user {
+  justify-content: flex-end;
+}
+
+.chat-entry.bot {
+  justify-content: flex-start;
+}
+
+.bubble {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.4;
+  max-width: 70%;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.user-bubble {
+  background-color: #DCF8C6;
+  border-bottom-right-radius: 0;
+  color: #000;
+  align-self: flex-end;
+}
+
+.bot-bubble {
+  background-color: #F1F0F0;
+  border-bottom-left-radius: 0;
+  color: #333;
+  align-self: flex-start;
+}
+
+.emotion {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ----------- Mobile Optimization ----------- */
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+
+  .chat-container {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  #chat-box {
+    height: 300px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .logout-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+  #toggleHistory {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #historyBox {
+    font-size: 13px;
+  }
+}

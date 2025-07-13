@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <button onclick="location.href='/logout'" class="logout-btn">Logout</button>
+        <h2>🤖 Welcome, {{ username }}!</h2>
+
+        <!-- Toggleable History Button -->
+        <button id="toggleHistory" onclick="toggleHistory()">📜 Show History</button>
+
+        <!-- Chat History Box (hidden by default) -->
+        <div id="historyBox" class="chat-log" style="display: none;">
+            {% for turn in history %}
+                <div class="chat-entry user">
+                    <div class="bubble user-bubble">
+                        <p>{{ turn.user }}</p>
+                    </div>
+                </div>
+                <div class="chat-entry bot">
+                    <div class="bubble bot-bubble">
+                        <p>{{ turn.bot }}</p>
+                        <p class="emotion">🧠 Emotion: <strong>{{ turn.emotion }}</strong></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Main Chat Box -->
+        <!-- Main Chat Box -->
+<div id="chat-box" class="chat-log">
+    {% for item in history %}
+        <div class="chat-entry user">
+            <div class="bubble user-bubble">
+                <p>{{ item.user }}</p>
+            </div>
+        </div>
+        <div class="chat-entry bot">
+            <div class="bubble bot-bubble">
+                <p>{{ item.bot }}</p>
+                <p class="emotion">🧠 Emotion: <strong>{{ item.emotion }}</strong></p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+        <!-- Input Area -->
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="startListening()">🎤 Speak</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
