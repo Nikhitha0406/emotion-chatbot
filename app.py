@@ -1,4 +1,3 @@
-# ✅ app.py — Emotion Chatbot with Email Login + Lazy Loading for Render
 from flask import Flask, request, render_template, session, redirect, url_for, jsonify, flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -123,6 +122,13 @@ def chat():
     # 💬 Lazy load response generator
     generate_response = get_response_generator()
 
+    # ✅ Debug test prompt (will show in Render logs)
+    try:
+        test_reply = generate_response("neutral", "This is a test prompt.")
+        print("✅ Test prompt success:", test_reply)
+    except Exception as e:
+        print("❌ Error in generate_response test:", e)
+
     # 💬 Generate response in English
     english_response = generate_response(primary_emotion, translated_input)
 
@@ -155,4 +161,6 @@ def chat():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
+    # ✅ Print API key to debug environment variable (for temporary check)
+    print("Loaded API Key:", os.environ.get("OPENROUTER_API_KEY"))
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
