@@ -7,4 +7,5 @@ SpeechRecognition
 Flask-Session
 Flask-SQLAlchemy
 python-dotenv
+gunicorn
 
