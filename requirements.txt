@@ -2,6 +2,7 @@ Flask
 httpx
 librosa
 transformers
+torch
 SpeechRecognition
 Flask-Session
 Flask-SQLAlchemy
